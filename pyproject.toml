@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pwg"
+version = "0.2.5"
+authors = [
+  { name="Qian Wenjie", email="qianwenjie@gmail.com" },
+  { name="Andrew Wason", email="rectalogic@rectalogic.com" },
+]
+description = "A small example package"
+readme = "README.rst"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "pycryptodome>=3.7.2",
+    "pproxy>=2.0.0",
+]
+
+[project.scripts]
+pwg = "pwg.server:main"
+
+[project.urls]
+Homepage = "https://github.com/rectalogic/pwg"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
